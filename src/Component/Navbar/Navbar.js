@@ -1,32 +1,22 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navbar = () => {
     return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-warning">
-    <div className="container">
-        <a className="navbar-brand">Navbar</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-            <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li className="nav-item">
-            <a className="nav-link" href="#">Features</a>
-            </li>
-            <li className="nav-item">
-            <a className="nav-link" href="#">Pricing</a>
-            </li>
-            <li className="nav-item">
-            <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-        </ul>
-        </div>
-    </div>
-    </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <div class="container">
+            <a class="navbar-brand" href="#">Search Movie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                <a class="nav-link active" href="#">Search Movie</a>
+                <a class="nav-link active" href="#">SignOut</a>
+                </div>
+            </div>
+            </div>
+        </nav>
     )
 }
 

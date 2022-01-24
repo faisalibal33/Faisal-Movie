@@ -4,6 +4,7 @@ import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Component/Navbar/Navbar';
+import "tachyons";
 
 function App() {
   const [apimovie, setApimovie] = useState()
@@ -24,14 +25,41 @@ function App() {
   }
   
   return (
-    <div className="App">
+    <div>
       <Navbar />
-      <h1> Search Movie </h1> <hr/>
-      <form onSubmit={handleSubmit}> 
-        <input onChange={handle}/>
-        <button>Search</button>
-      </form><hr/>
-      {JSON.stringify(apimovie)}
+      <div className='container'>
+      <div className='row mt-3 justify-content-center'>
+        <div className='col-md-8'>
+          <h1 className='text-center'> Search Movie </h1>
+          <form onSubmit={handleSubmit}> 
+            <div className="input-group mb-3">
+              <input onChange={handle} type="text" className="form-control" placeholder="Movie Title..."/>
+              <button className="btn btn-warning" type="submit">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      </div>
+      <hr/>
+      <div className='container'>
+      <div className='row row-cols-md-4'>
+        {apimovie && apimovie.map((data, index) => {
+          console.log(data)
+          return (
+            <div className='mb-3'>
+              <div key={index} className="card grow">
+                <img src={data.Poster} className="card-img-top" alt="Poster.."/>
+                <div className="card-body">
+                  <h5 className="card-title">{data.Title}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{data.Year}</h6>
+                  <a href="#" class="card-link">See Detail</a>
+                </div>
+              </div>
+              </div>
+          )
+        })}
+        </div>
+        </div>
     </div>
   );
 }

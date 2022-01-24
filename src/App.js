@@ -4,7 +4,6 @@ import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Component/Navbar/Navbar';
-import "tachyons";
 
 function App() {
   const [apimovie, setApimovie] = useState()
@@ -47,7 +46,7 @@ function App() {
           console.log(data)
           return (
             <div className='mb-3'>
-              <div key={index} className="card grow">
+              <div key={index} className="card">
                 <img src={data.Poster} className="card-img-top" alt="Poster.."/>
                 <div className="card-body">
                   <h5 className="card-title">{data.Title}</h5>

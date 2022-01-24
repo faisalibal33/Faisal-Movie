@@ -1,14 +1,23 @@
-import React from "react"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
 
-const Card = ({Title, Poster}) => {
+const Card = ({apimovie}) => {
     return (
-        <div className="card w-25">
-            <img src={Poster} className="card-img-top" alt="..."/>
-            <div className="card-body">
-                <h5 className="card-title">{Title}</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <p className="btn btn-primary">Go somewhere</p>
+        <div className='container'>
+            <div className='row row-cols-md-4'>
+                {apimovie && apimovie.map((data, index) => {
+                    return (
+                        <div className='mb-3'>
+                            <div key={index} className="card">
+                                <img src={data.Poster} className="card-img-top" alt="Poster.."/>
+                                <div className="card-body">
+                                    <h5 className="card-title">{data.Title}</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">{data.Year}</h6>
+                                    <a href="#" class="card-link">See Detail</a>
+                                </div>
+                            </div>
+                         </div>
+                    )
+                })}
             </div>
         </div>
     )

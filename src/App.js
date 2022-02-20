@@ -53,7 +53,7 @@ function App() {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault()
-      const response = await axios.get(`http://www.omdbapi.com/?apikey=88bf0a87&s=${search}`)
+      const response = await axios.get(`https://www.omdbapi.com/?apikey=88bf0a87&s=${search}`)
       setApimovie(response.data.Search)
       if (true) {
         fetch('http://localhost:3000/image', {

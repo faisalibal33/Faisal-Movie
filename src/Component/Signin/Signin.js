@@ -67,10 +67,10 @@ const Signin = ({ruteChange, loadUser}) => {
                 type="submit" 
                 value="Sign in"/>
             </div>
-            <div className="lh-copy mt3 w-50 center">
+            <div className="mt3">
               <p
                 onClick= {() => ruteChange('register')}
-                className="f6 link dim black db white">Register</p>
+                className="tl ma0 f6 link dim black db white pointer">Register</p>
             </div>
           </form>
         </main>

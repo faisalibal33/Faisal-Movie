@@ -84,7 +84,7 @@ const Register = ({ruteChange, loadUser}) => {
                 type="submit" 
                 value="Register"/>
             </div>
-            <div className="lh-copy mt3 w-50 center">
+            <div className="mt3 w-50">
               <p onClick= {() => ruteChange('signin')} className="f6 link dim black db white">Sign in</p>
             </div>
           </form>

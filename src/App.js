@@ -53,7 +53,6 @@ function App() {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault()
-<<<<<<< HEAD
       fetch('http://localhost:3000/url', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
@@ -65,10 +64,6 @@ function App() {
       .then(data => {
         setApimovie(data)
       })
-=======
-      const response = await axios.get(`https://www.omdbapi.com/?apikey=88bf0a87&s=${search}`)
-      setApimovie(response.data.Search)
->>>>>>> 0025b22b4a9035de5dffdeb509c7300d9f05b1ba
       if (true) {
         fetch('http://localhost:3000/image', {
           method: 'put',

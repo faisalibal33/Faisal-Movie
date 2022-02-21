@@ -20,7 +20,7 @@ const Register = ({ruteChange, loadUser}) => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    fetch('http://localhost:3000/register', {
+    fetch('https://faisalmovie.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

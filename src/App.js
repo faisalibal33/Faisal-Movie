@@ -53,7 +53,7 @@ function App() {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault()
-      fetch('http://localhost:3000/url', {
+      fetch('https://faisalmovie.herokuapp.com/url', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -65,7 +65,7 @@ function App() {
         setApimovie(data)
       })
       if (true) {
-        fetch('http://localhost:3000/image', {
+        fetch('https://faisalmovie.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({

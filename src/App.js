@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React from 'react';
 import { useState} from 'react';
 import './App.css';
@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Component/Navbar/Navbar';
 import Searchmovie from './Component/Searchmovie/Searchmovie';
 import Card from './Component/Card/Card';
-import 'tachyons';
 import Signin from './Component/Signin/Signin';
 import Register from './Component/Register/Register';
 
@@ -26,7 +25,7 @@ function App() {
 
   // useEffect(() => {
   //   server();
-  // });
+  // },[]);
 
   // const server = async () => {
   //   try{
